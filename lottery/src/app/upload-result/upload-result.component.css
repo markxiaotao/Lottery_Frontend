@@ -1,0 +1,40 @@
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .row-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .dynamic-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .col-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .hot {
+    width: 100%;
+  }
+  
+  
+  
+  .button {
+    display: flex;
+    align-items: center;
+  }

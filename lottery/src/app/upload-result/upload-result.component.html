@@ -1,0 +1,73 @@
+<div style="text-align:center">
+    <h1>
+      Input Result 
+    </h1>
+  </div>
+<div class="container">
+    <form (ngSubmit)="onSubmit($event)" [formGroup]="uploadForm">
+      <div class="info-container">
+        <div class="input">
+          <mat-form-field>
+            <h2>First Prize-6,000,000 Baht</h2>
+            <input type="number" matInput  name="fp" formControlName="fp">
+          </mat-form-field>
+        </div>
+        <div class="input">
+          <mat-form-field>
+            <h2>Three Digits Prefix-4,000 Baht </h2>
+            <input type="text" matInput name="tdp" formControlName="tdp" style="width:400px; height:20px;">
+          </mat-form-field>
+        </div>
+        <div class="input">
+          <mat-form-field>
+            <h2>Three Digits SuFfix-4,000 Baht </h2>
+            <input type="text" matInput name="sdf" formControlName="sdf" style="width:400px; height:20px;">
+          </mat-form-field>
+        </div>
+        <div class="input">
+          <mat-form-field>
+            <h2>Two digits suffix-2,000 Baht </h2>
+            <input type="number" matInput name="td" formControlName="td" style="width:400px; height:20px;">
+          </mat-form-field>
+        </div>
+        <div class="input">
+            <mat-form-field>
+                <h2>First Prize Neighbors-100,000 Baht </h2>
+                <input type="text" matInput name="fpn" formControlName="fpn" style="width:400px; height:20px;">
+            </mat-form-field>
+        </div>
+        <div class="input">
+            <mat-form-field>
+                <h2>Second Prize-200,000 Baht</h2>
+                <input type="text" matInput name="tnp" formControlName="tnp" style="width:400px; height:20px;">
+            </mat-form-field>
+        </div>
+        <div class="input">
+            <mat-form-field>
+                <h2>Third Prize-80,000 Baht</h2>
+                <input type="text" matInput name="tp" formControlName="tp" style="width:400px; height:20px;">
+            </mat-form-field>
+        </div>
+        <div class="input">
+            <mat-form-field>
+                <h2>Fourth Prize-40,000 Baht </h2>
+                <input type="text" matInput  name="fnp" formControlName="fnp" style="width:400px; height:20px;">
+            </mat-form-field>
+        </div>
+        <div class="input">
+            <mat-form-field>
+                <h2>Fifth Prize-20,000 Bath</h2>
+                <input type="text" matInput name="fps" formControlName="fps" style="width:400px; height:20px;">
+            </mat-form-field>
+        </div>
+      </div>
+      <button type="submit" mat-raised-button color="primary">Submit</button>
+    </form>
+  
+  </div>
+
+
+  
+
+  
+  
