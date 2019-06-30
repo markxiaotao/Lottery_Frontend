@@ -1,0 +1,21 @@
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+table, .mat-table {
+    width: 100%;
+}
+
+.datefield {
+    width: 10em;
+    padding-left: 1em;
+}
+
+.mat-cell {
+    padding-left:  0.5em;
+    padding-right: 0.5em;
+}
+[hidden] {
+    display: none !important;
+  }

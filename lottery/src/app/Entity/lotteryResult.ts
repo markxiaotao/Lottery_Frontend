@@ -1,6 +1,7 @@
 export class LotteryResult {
     id: number;
     firstPrize: number;
+    date: string;
     threeDigitPrefix: [];
     threeDigitSuffix: [];
     twoDigitSuffix: number;

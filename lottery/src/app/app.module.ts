@@ -7,22 +7,25 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
   MatOptionModule,
   MatRow,
   MatCell,
+  MatSort,
   MatExpansionModule,
   MatDialogModule} from '@angular/material';
-
+  import { MatSortModule } from '@angular/material/sort'; 
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UploadResultComponent } from './upload-result/upload-result.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewResultComponent } from './view-result/view-result.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MyNavComponent,
-    UploadResultComponent
+    UploadResultComponent,
+    ViewResultComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

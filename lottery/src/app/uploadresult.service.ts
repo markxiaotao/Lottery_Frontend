@@ -12,5 +12,8 @@ export class UploadresultService {
     console.log(lotteryResult)
     return this.http.post<any>(`http://localhost:8080/create-result`, lotteryResult);
   }
+  viewLotteryResults(): Observable<LotteryResult[]> {
+    return this.http.get<LotteryResult[]>(`http://localhost:8080/get-results`);
+  }
 
 }

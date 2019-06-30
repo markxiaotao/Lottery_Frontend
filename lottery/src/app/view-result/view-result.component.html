@@ -1,0 +1,78 @@
+<form [formGroup]="filterForm">
+    <table><tr><td>
+
+        <label>Select type</label>
+        <select (change)="updateTypeFilter($event)" >
+                <option  ([value])="type" *ngFor="let type of types">{{type}}</option>
+            </select>
+    </td>
+    <td class="filterfield">
+    <mat-form-field>
+            &nbsp;
+        <input matInput formControlName="date" name="date" placeholder="Filter date "  (keyup)="updateFilter($event)">
+    </mat-form-field>
+    </td><td>&nbsp;
+    </td></tr></table>
+</form>
+
+<table mat-table [dataSource]="resTable" matSort class="mat-elevation-z8">
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <ng-container *ngIf="showfirstPrize" matColumnDef="firstPrize">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>First Prize</th>
+        <td mat-cell [hidden]="!showfirstPrize" *matCellDef="let row">{{row.firstPrize}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+        <td mat-cell *matCellDef="let row">{{row.date}}</td>
+    </ng-container>
+
+    <ng-container *ngIf="showthreeDigitPrefix" matColumnDef="threeDigitPrefix">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Three Digit Prefix</th>
+        <td mat-cell [hidden]="!showthreeDigitPrefix" *matCellDef="let row">{{row.threeDigitPrefix}}</td>
+    </ng-container>
+
+    <ng-container *ngIf="showthreeDigitSuffix" matColumnDef="threeDigitSuffix">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Three Digit Suffix</th>
+        <td mat-cell [hidden]="!showthreeDigitSuffix" *matCellDef="let row">{{row.threeDigitSuffix}}</td>
+    </ng-container>
+
+    <ng-container *ngIf="showtwoDigitSuffix" matColumnDef="twoDigitSuffix">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Two Digit Suffix</th>
+        <td mat-cell [hidden]="!showtwoDigitSuffix" *matCellDef="let row">{{row.twoDigitSuffix}}</td>
+    </ng-container>
+
+    <ng-container *ngIf="showfirstPrizeNei"matColumnDef="firstPrizeNei">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>First Prize Neighborood</th>
+        <td mat-cell [hidden]="!showfirstPrizeNei" *matCellDef="let row">{{row.firstPrizeNei}}</td>
+    </ng-container>
+
+    <ng-container *ngIf="showsecondPrize"matColumnDef="secondPrize">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Second Prize</th>
+        <td mat-cell [hidden]="!showsecondPrize" *matCellDef="let row">{{row.secondPrize}}</td>
+    </ng-container>
+
+    <ng-container  matColumnDef="thirdPrize">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Third Prize</th>
+        <td mat-cell [hidden]="!showthirdPrize" *matCellDef="let row">{{row.thirdPrize}},{{this.showthirdPrize}}</td>
+    </ng-container>
+
+    <ng-container *ngIf="showfourthPrize" matColumnDef="fourthPrize">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Fourth Prize</th>
+        <td mat-cell [hidden]="!showfourthPrize" *matCellDef="let row">{{row.fourthPrize}}</td>
+    </ng-container>
+
+    <ng-container *ngIf="showfifthPrize" matColumnDef="fifthPrize">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Fifth Prize</th>
+        <td mat-cell [hidden]="!showfifthPrize" *matCellDef="let row">{{row.fifthPrize}}</td>
+    </ng-container>
+    
+
+</table>
